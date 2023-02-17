@@ -1,0 +1,37 @@
+$rosa-clarito: #EEE2DF;
+$rosa-intermedio: #EED7C5;
+$rosa-oscuro: #C89F9C;
+
+/* ---------------  FOOTER  -------------------- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $rosa-clarito;
+    padding: 15px;
+}
+
+footer section {
+    padding: 15px;
+}
+
+.info-page {
+    width: 55vw;
+}
+
+.info-page p {
+    margin: 4px;
+    font-size: 15px;
+}
+
+.seccion-redes h3 {
+    text-align: center;
+    padding: 8px;
+}
+
+.seccion-redes a {
+    margin: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}

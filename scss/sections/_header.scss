@@ -1,0 +1,29 @@
+$rosa-clarito: #EEE2DF;
+$rosa-intermedio: #EED7C5;
+$rosa-oscuro: #C89F9C;
+
+/* ---------------  MENU  -------------------- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: $rosa-clarito;
+}
+
+
+
+.logo {
+    width: 270px;
+}
+
+.menu a {
+    margin: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar {
+    display: none;
+}

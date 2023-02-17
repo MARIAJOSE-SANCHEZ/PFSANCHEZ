@@ -1,0 +1,57 @@
+$rosa-clarito: #EEE2DF;
+$rosa-intermedio: #EED7C5;
+$rosa-oscuro: #C89F9C;
+
+/* ------ pagina contacto ------ */
+
+.contenido-contacto {
+    display: flex;
+    flex-direction: column;
+    border: black dashed 1px;
+    align-items: center;
+    background-image: url('https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario span {
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.formulario input {
+    margin: 20px;
+    padding: 5px;
+    width: 190px;
+    font-size: 17px;
+    text-align: center;
+    background-color: white;
+}
+
+.eleccion input {
+    margin: 15px;
+    width: 20px;
+}
+
+.contacto {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 20px;
+    background-color: rgb(196, 159, 155);
+    width: 100%;
+    text-align: center;
+}
+
+input:focus {
+    background-color: hsl(209, 52%, 75%);
+    transition: .5s all;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
