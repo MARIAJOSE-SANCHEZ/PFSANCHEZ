@@ -1,16 +1,12 @@
-$rosa-clarito: #EEE2DF;
-$rosa-intermedio: #EED7C5;
-$rosa-oscuro: #C89F9C;
+@import './utilidades/colors';
+@import './utilidades/font';
+@import './utilidades/reset';
 
 @import './sections/footer';
 @import './sections/header';
 @import './sections/main-contac';
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 
 /* ---------------  CONTENIDO PRINCIPAL  -------------------- */
