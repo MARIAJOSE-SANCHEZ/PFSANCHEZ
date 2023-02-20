@@ -15,16 +15,13 @@ $rosa-oscuro: #C89F9C;
 
 /* ---------------  CONTENIDO PRINCIPAL  -------------------- */
 
-.container {
+.container-fluid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "banner banner banner banner"
         "prod-1 prod-2 prod-3 prod-4"
-        "prod-1 prod-2 prod-3 prod-4";
-    margin: 0;
-    padding: 0;
 }
  nav{
     padding: 0 !important;
@@ -62,22 +59,22 @@ $rosa-oscuro: #C89F9C;
 
 .img-cover {
     width: 100%;
-    height: 30%;
+    height: 50%;
     object-fit: cover;
 }
 
 .nombre-prod {
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
 }
 
 .descripcion {
-    font-size: 23px;
+    font-size: 20px;
     text-align: center;
 }
 
 .container button {
-    font-size: 15px;
+    font-size: 10px;
     margin: 10px;
 }
 
