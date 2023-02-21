@@ -55,3 +55,30 @@ input:focus {
     border-radius: 5px;
     transform: scale(1.1);
 }
+
+// -------- RESPONSIVE ----------
+@media (max-width: 768px) {
+    .contenido-contacto {
+        background-image: none;
+        background-color: $rosa-oscuro;
+    }
+
+    input:focus {
+        background-color: hsl(282, 40%, 84%);
+        transition: .5s all;
+    }
+}
+
+@media (max-width: 420px) {
+    .formulario span {
+        font-size: 20px;
+        padding: 10px;
+        font-weight: normal;
+        ;
+    }
+
+    .formulario input {
+        font-size: 20px;
+        font-weight: normal;
+    }
+}

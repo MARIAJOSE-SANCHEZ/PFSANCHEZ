@@ -11,8 +11,6 @@ header {
     background-color: $rosa-clarito;
 }
 
-
-
 .logo {
     width: 270px;
 }
@@ -26,4 +24,15 @@ header {
 
 .navbar {
     display: none;
+}
+
+// --------- RESPONSIVE ---------
+@media (max-width: 768px) {
+    header {
+        display: none;
+    }
+
+    .navbar {
+        display: block;
+    }
 }

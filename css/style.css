@@ -1,13 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif; }
+
 /* ---------------  FOOTER  -------------------- */
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #EEE2DF;
+  padding: 10px;
+  width: 100%; }
+
+footer article {
   padding: 15px; }
 
-footer section {
-  padding: 15px; }
+h3 {
+  font-family: "Lora", serif; }
 
 .info-page {
   width: 55vw; }
@@ -22,9 +34,29 @@ footer section {
 
 .seccion-redes a {
   margin: 5px;
-  font-size: 18px;
+  font-size: 15px;
   text-decoration: none;
   color: black; }
+
+@media (max-width: 768px) {
+  .seccion-redes {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    align-items: center; }
+  .seccion-redes a {
+    margin: 2px;
+    font-size: 15px; } }
+
+@media (max-width: 420px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center; }
+  .info-page {
+    width: 90vw;
+    text-align: center; } }
 
 /* ---------------  MENU  -------------------- */
 header {
@@ -45,6 +77,12 @@ header {
 
 .navbar {
   display: none; }
+
+@media (max-width: 768px) {
+  header {
+    display: none; }
+  .navbar {
+    display: block; } }
 
 /* ------ pagina contacto ------ */
 .contenido-contacto {
@@ -92,16 +130,27 @@ input:focus {
   border-radius: 5px;
   transform: scale(1.1); }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+@media (max-width: 768px) {
+  .contenido-contacto {
+    background-image: none;
+    background-color: #C89F9C; }
+  input:focus {
+    background-color: #ddc6e7;
+    transition: .5s all; } }
 
-/* ---------------  CONTENIDO PRINCIPAL  -------------------- */
+@media (max-width: 420px) {
+  .formulario span {
+    font-size: 20px;
+    padding: 10px;
+    font-weight: normal; }
+  .formulario input {
+    font-size: 20px;
+    font-weight: normal; } }
+
 .container-fluid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.4fr 1fr;
   grid-template-areas: "banner banner banner banner" "prod-1 prod-2 prod-3 prod-4"; }
 
 nav {
@@ -133,16 +182,27 @@ nav {
 
 .img-cover {
   width: 100%;
-  height: 50%;
+  height: 60%;
   object-fit: cover; }
 
+.info-producto {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
 .nombre-prod {
-  font-size: 25px;
-  text-align: center; }
+  font-size: 20px;
+  font-family: "Lora", serif;
+  text-align: center;
+  margin: 5px; }
 
 .descripcion {
-  font-size: 20px;
-  text-align: center; }
+  font-size: 17px;
+  text-align: center;
+  padding: 5px;
+  margin: 5px; }
 
 .container button {
   font-size: 10px;
@@ -159,7 +219,7 @@ nav {
     background-color: #EEE2DF; }
   .logo {
     margin: 10px;
-    width: 250px; }
+    width: 245px; }
   .menu {
     display: flex;
     flex-wrap: wrap;
@@ -167,25 +227,15 @@ nav {
   .menu a {
     font-size: 18px;
     margin: 5px; }
-  .seccion-redes {
-    display: flex;
-    flex-direction: column;
-    width: 30vw;
-    align-items: center; }
-  .seccion-redes a {
-    margin: 2px;
-    font-size: 15px; }
-  .container {
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-areas: "banner banner banner banner" "prod-1 prod-1 prod-2 prod-2" "prod-1 prod-1 prod-2 prod-2" "prod-3 prod-3 prod-4 prod-4" "prod-3 prod-3 prod-4 prod-4";
-    /* height: 300vh; */ }
-  /* pagina contacto */
-  .contenido-contacto {
-    background-image: none;
-    background-color: #C89F9C; }
-  input:focus {
-    background-color: #ddc6e7;
-    transition: .5s all; } }
+  .container-fluid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr 1fr;
+    grid-template-areas: "banner banner" "prod-1 prod-2" "prod-3 prod-4"; }
+  .nombre-prod {
+    font-size: 28px;
+    margin: 8px; }
+  .descripcion {
+    font-size: 23px; } }
 
 /* Dispositivo Chico */
 @media (max-width: 420px) {
@@ -196,15 +246,12 @@ nav {
   .logo {
     margin: 5px;
     width: 150px; }
-  .banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
   .menu a {
     font-size: 18px;
     margin: 10px; }
-  .container {
-    grid-template-columns: repeat(1, 1fr);
+  .container-fluid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.35fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "banner" "prod-1" "prod-2" "prod-3" "prod-4"; }
   .nombre-prod {
     font-size: 30px;
@@ -212,11 +259,6 @@ nav {
   .descripcion {
     font-size: 25px;
     text-align: center; }
-  /* pagina contacto */
-  .formulario span {
-    font-size: 20px;
-    padding: 10px;
-    font-weight: normal; }
-  .formulario input {
-    font-size: 20px;
-    font-weight: normal; } }
+  .container button {
+    font-size: 15px;
+    margin: 15px; } }
