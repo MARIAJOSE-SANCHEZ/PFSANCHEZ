@@ -66,6 +66,9 @@ header {
   padding: 15px;
   background-color: #EEE2DF; }
 
+nav {
+  padding: 0 !important; }
+
 .logo {
   width: 270px; }
 
@@ -78,11 +81,25 @@ header {
 .navbar {
   display: none; }
 
+/* Dispositivo Mediano */
 @media (max-width: 768px) {
   header {
     display: none; }
   .navbar {
     display: block; } }
+
+/* Dispositivo Chico */
+@media (max-width: 420px) {
+  header {
+    display: none; }
+  .navbar {
+    display: block; }
+  .logo {
+    margin: 5px;
+    width: 150px; }
+  .menu a {
+    font-size: 18px;
+    margin: 10px; } }
 
 /* ------ pagina contacto ------ */
 .contenido-contacto {
@@ -147,14 +164,38 @@ input:focus {
     font-size: 20px;
     font-weight: normal; } }
 
+.main-verano2023 h2 {
+  background-color: #ff8ef0e7;
+  text-align: center;
+  font-family: "Lora", serif;
+  font-size: 30px;
+  padding: 10px;
+  margin: 0 !important;
+  transition: 10s all; }
+
+.main-accesorios h2 {
+  background-color: #fc78eae7;
+  text-align: center;
+  font-family: "Lora", serif;
+  font-size: 30px;
+  padding: 10px;
+  margin: 0 !important;
+  transition: 10s all; }
+
+.main-bags h2 {
+  background-color: #e63dcfcc;
+  text-align: center;
+  font-family: "Lora", serif;
+  font-size: 30px;
+  padding: 10px;
+  margin: 0 !important;
+  transition: 10s all; }
+
 .container-fluid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.4fr 1fr;
   grid-template-areas: "banner banner banner banner" "prod-1 prod-2 prod-3 prod-4"; }
-
-nav {
-  padding: 0 !important; }
 
 .banner {
   grid-area: banner; }
@@ -201,7 +242,6 @@ nav {
 .descripcion {
   font-size: 17px;
   text-align: center;
-  padding: 5px;
   margin: 5px; }
 
 .container button {
@@ -211,19 +251,8 @@ nav {
 /* ---------------  RESPONSIVE  -------------------- */
 /* Dispositivo Mediano */
 @media (max-width: 768px) {
-  header {
-    display: none; }
-  .navbar {
-    display: block; }
-  .container-fluid {
-    background-color: #EEE2DF; }
-  .logo {
-    margin: 10px;
-    width: 245px; }
-  .menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; }
+  h2 {
+    font-size: 25px !important; }
   .menu a {
     font-size: 18px;
     margin: 5px; }
@@ -232,23 +261,15 @@ nav {
     grid-template-rows: 0.4fr 1fr 1fr;
     grid-template-areas: "banner banner" "prod-1 prod-2" "prod-3 prod-4"; }
   .nombre-prod {
-    font-size: 28px;
+    font-size: 25px;
     margin: 8px; }
   .descripcion {
-    font-size: 23px; } }
+    font-size: 20px; } }
 
 /* Dispositivo Chico */
 @media (max-width: 420px) {
-  header {
-    display: none; }
-  .navbar {
-    display: block; }
-  .logo {
-    margin: 5px;
-    width: 150px; }
-  .menu a {
-    font-size: 18px;
-    margin: 10px; }
+  h2 {
+    font-size: 20px !important; }
   .container-fluid {
     grid-template-columns: 1fr;
     grid-template-rows: 0.35fr 1fr 1fr 1fr 1fr;

@@ -11,6 +11,10 @@ header {
     background-color: $rosa-clarito;
 }
 
+nav{
+    padding: 0 !important;
+}
+
 .logo {
     width: 270px;
 }
@@ -27,6 +31,7 @@ header {
 }
 
 // --------- RESPONSIVE ---------
+/* Dispositivo Mediano */
 @media (max-width: 768px) {
     header {
         display: none;
@@ -34,5 +39,26 @@ header {
 
     .navbar {
         display: block;
+    }
+}
+
+/* Dispositivo Chico */
+@media (max-width: 420px) {
+    header {
+        display: none;
+    }
+
+    .navbar {
+        display: block;
+    }
+    
+    .logo {
+        margin: 5px;
+        width: 150px;
+    }
+
+    .menu a {
+        font-size: 18px;
+        margin: 10px;
     }
 }

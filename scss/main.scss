@@ -6,8 +6,29 @@
 @import './sections/header';
 @import './sections/main-contac';
 
+@mixin titulo-section ($fondocolor){
+    background-color: $fondocolor;
+    text-align: center;
+    font-family: $typo-principal;
+    font-size: 30px;
+    padding: 10px;
+    margin: 0 !important;
+    transition: 10s all;
+}
 
 // /* ---------------  CONTENIDO PRINCIPAL  -------------------- */
+
+.main-verano2023 h2 {
+    @include titulo-section ($rosa-titulo1);
+}
+
+.main-accesorios h2 {
+    @include titulo-section ($rosa-titulo2);
+}
+
+.main-bags h2 {
+    @include titulo-section ($rosa-titulo3);
+}
 
 .container-fluid {
     display: grid;
@@ -16,10 +37,6 @@
     grid-template-areas:
         "banner banner banner banner"
         "prod-1 prod-2 prod-3 prod-4"
-}
-
-nav {
-    padding: 0 !important;
 }
 
 .banner {
@@ -76,7 +93,6 @@ nav {
 .descripcion {
     font-size: 17px;
     text-align: center;
-    padding: 5px;
     margin: 5px;
 }
 
@@ -90,29 +106,9 @@ nav {
 
 /* Dispositivo Mediano */
 @media (max-width: 768px) {
-    header {
-        display: none;
+    h2{
+        font-size: 25px !important;
     }
-
-    .navbar {
-        display: block;
-    }
-
-    .container-fluid {
-        background-color: $rosa-clarito;
-    }
-
-    .logo {
-        margin: 10px;
-        width: 245px;
-    }
-
-    .menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     .menu a {
         font-size: 18px;
         margin: 5px;
@@ -128,37 +124,20 @@ nav {
     }
 
     .nombre-prod {
-        font-size: 28px;
+        font-size: 25px;
         margin: 8px;
     }
 
     .descripcion {
-        font-size: 23px;
+        font-size: 20px;
     }
 }
 
 /* Dispositivo Chico */
 @media (max-width: 420px) {
-    header {
-        display: none;
+    h2{
+        font-size: 20px !important;
     }
-
-    .navbar {
-        display: block;
-    }
-
-    .logo {
-        margin: 5px;
-        width: 150px;
-    }
-
-
-
-    .menu a {
-        font-size: 18px;
-        margin: 10px;
-    }
-
     .container-fluid {
         grid-template-columns: 1fr;
         grid-template-rows: 0.35fr 1fr 1fr 1fr 1fr;
